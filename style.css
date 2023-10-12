@@ -1,0 +1,411 @@
+/*----------Custom Fonts-------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Manrope:wght@800&family=Space+Grotesk:wght@500&display=swap');
+
+/*----------Custom Colors-------------*/
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --primary--Soft-orange: hsl(35, 77%, 62%);
+    --primary--Soft-red: hsl(5, 85%, 63%);
+    --neutral--Off-White: hsl(36, 100%, 99%);
+    --neutral--Grayish-Blue:hsl(233, 8%, 79%);
+    --neutral--Dark-Grayish-Blue: hsl(236, 13%, 42%);
+    --neutral--Very-Dark-Blue: hsl(240, 100%, 5%);
+
+    --ff-regular: 'Inter', sans-serif;
+    --fw-regular: 400;
+    --fw-bolder: 700;
+    --fw-bold: 800;
+}
+/*-----CSS Reset------*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    font-family: var(--ff-regular);
+    padding: 1em;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    7. no arrows on Number Inputs
+  */  
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+        appearance: textfield;
+    -moz-appearance: textfield;
+    }
+/*---------------------------------------------------------------------------------------------------------------------*/  
+/*--------------------------------------------------Page Styling-------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/  
+
+/*---------------------------------------------------------Header------------------------------------------------------*/
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.Company__Logo{
+  width: 45px;
+}
+
+.Hamburger__Menu__Icon:hover{
+  cursor: pointer;
+}
+
+/*-----------------------------------------------------------Nav-------------------------------------------------------*/
+nav{
+  position: absolute;
+  background-color: var(--neutral--Off-White);
+  right: 0;
+  top:0;
+  height:100%;
+  width: 68%;
+  display: none;
+}
+
+.Nav__Elements{
+  padding: 1.5rem;
+}
+
+.Close__Icon{
+  display: flex;
+  float: right;
+  margin-top: 0.8rem;
+}
+
+.Close__Icon:hover{
+  cursor: pointer;
+}
+
+.Nav__Links{
+  list-style: none;
+  font-size: 1.1rem;
+  line-height: 250%;
+  margin-top: 7.5rem;
+  padding: 0;
+}
+nav li:hover{
+  color:var(--primary--Soft-orange);
+  cursor: pointer
+}
+
+/*--------------------------------------------------------Main Page-----------------------------------------------------*/
+main{
+  margin-top: 2rem;
+  display: grid;
+  row-gap: 4rem;
+}
+
+/*-----------------------------------------------------Spotlight Article---------------------------------------------*/
+
+.Spotlight__Article{
+  color:var(--neutral--Dark-Grayish-Blue);
+  font-size: 0.95rem;
+  line-height: 175%;
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.Spotlight__Article h1{
+  color:var(--neutral--Very-Dark-Blue);
+  font-size: 2.5rem;
+  letter-spacing: 0px;
+  line-height: 100%;
+  font-weight: var(--fw-bold);
+}
+
+.Spotlight__Content{
+  display: grid;
+  row-gap: 1rem;
+}
+.Read__More__Btn{
+    border: none;
+    background-color:var(--primary--Soft-red);
+    color: var(--neutral--Off-White);
+    text-transform: uppercase;
+    font-size:0.8rem;
+    font-weight: var(--fw-bolder);
+    letter-spacing: 4px;
+    padding: 0.6rem 2rem 0.6rem 2rem;
+    display: block;
+    margin-top: 1.5rem
+}
+.Read__More__Btn:hover{
+    background-color: var(--neutral--Very-Dark-Blue);
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------New Articles Section---------------------------------------------*/
+.New__Articles__Container{
+    background-color: var(--neutral--Very-Dark-Blue);
+    color: var(--neutral--Grayish-Blue);
+    padding: 1rem;
+    height: fit-content;
+}
+.New__Articles__Container h1{
+    color: var(--primary--Soft-orange);
+    font-size: 2rem;
+}
+.New__Articles__Container h2{
+    color:var(--neutral--Off-White);
+    font-size: 1.25rem;
+    font-weight:var(--fw-bold);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+.New__Articles__Container h2:hover{
+    color: var(--primary--Soft-orange);
+    cursor: pointer;
+}
+.New__Article{
+    border-top: 1px solid var(--neutral--Grayish-Blue);
+    margin-bottom: 1.75rem;
+}
+
+.New__Article:first-of-type {
+  border-top: none;
+}
+.New__Article:last-of-type   {
+  margin-bottom: 0.75rem;
+}
+/*-----------------------------------------------------Articles Suggestions---------------------------------------------*/
+.Article__Suggestions{
+  display: grid;
+  row-gap: 2rem;
+}
+
+.Article__Suggestion{
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.Article__Suggestion:hover{
+  cursor: pointer;
+}
+
+.Big__Article__Number{
+  color: var(--neutral--Grayish-Blue);
+  font-size: 1.95rem;
+  font-weight: var(--fw-bolder);
+  margin-top: -0.6rem;
+}
+.Article__Suggestion h2{
+  color: var(--neutral--Very-Dark-Blue);
+  font-size: 1.1rem;
+  font-weight: var(--fw-bold);
+}
+.Article__Suggestion h2:hover{
+  color: var(--primary--Soft-red);
+}
+
+.Article__Suggestion .content{
+  color:var(--neutral--Dark-Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.Article__Suggestion__Text{
+  font-size: 0.95rem;
+  line-height: 170%;
+  font-weight: var(--fw-regular);
+}
+
+.Article__Suggestion__Image{
+  width: 6.25rem;
+  height: 8rem;
+  
+}
+
+/*--------------------------------------------------------Attribution---------------------------------------------------*/
+footer{
+  background-color: var(--neutral--Dark-Grayish-Blue);
+  margin-top: 1rem;
+  color: var(--White);
+  position: absolute;
+  margin-bottom: 0;
+  width: 100%;
+  padding:0;
+  left:0;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color: var(--neutral--Grayish-Blue)}
+.attribution a:hover { color: var(--primary--Soft-orange)}
+
+/*--------------------------------------------Media Queries for Desktop Display------------------------------------------*/
+
+@media(min-width: 600px)
+  {
+    /* Order Spotlight and New Articles Section next to each other */
+    main{
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 2;
+      row-gap: 4.7rem;
+      column-gap: 1.8rem;
+    } 
+  }
+
+  @media(min-width: 800px)
+  {
+    /*Size up Company Logo*/
+    .Company__Logo{
+      width: 65px;
+    }
+    .Spotlight__Article{
+      row-gap: 2.3rem;
+    }
+  }
+
+  @media(min-width: 1050px)
+  {
+    /*Add Padding for Site*/
+    body{
+      padding: 3.6rem 9.7rem 3.6rem 10.4rem;
+    }
+
+    main{
+      margin-top: 3.5rem;
+    }
+    
+    /*----------------------------*/
+    /*Show Navbar in Desktop View*/
+    /*----------------------------*/
+    nav{
+      position:static;
+      height:fit-content;
+      width: fit-content;
+      background:none;
+      display: flex;
+    }
+
+    nav li{
+      padding-left: 2rem;
+    }
+
+    nav li:hover{
+      cursor: pointer;
+      color: var(--primary--Soft-orange);
+    }
+    
+    .Close__Icon{
+      display: none;
+    }
+    
+    .Nav__Links{
+      font-size: 1rem;
+      color:var(--neutral--Dark-Grayish-Blue);
+      display: flex;
+      margin: 0;
+    }
+
+    .Nav__Elements{
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .Hamburger__Menu__Icon{
+      display: none
+    }
+
+    /* Make 2 Columns for Article Suggestion*/
+    .Article__Suggestions{
+      grid-column: 1 / 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.25rem;
+      row-gap: 2rem;
+    }
+  }
+
+
+  @media(min-width: 1250px)
+  {
+    /*Order Spotlight Content next to each other*/
+    .Spotlight__Content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+    }
+    /*size up Spotlight Headline*/
+    .Spotlight__Article h1{
+      font-size: 3.5rem;
+    }
+    /*size down Spotlight Article line-height*/
+    .Spotlight__Article{
+      line-height: 160%;
+    }
+  }
+
+  @media(min-width: 1350px)
+  { 
+    /* Make 3 Columns for Article Suggestion*/
+    .Article__Suggestions{
+      grid-column: 1 / 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 1.25rem;
+    }
+    /* Increase margin for Read More Button*/
+    .Read__More__Btn{
+      margin-top: 2rem
+  }
+  }
+
+  /*Increase Distance between Nav Links*/
+  @media(min-width: 1600px)
+  { 
+    nav li{
+      padding-left: 4rem;
+    }
+    .Nav__Links{
+      list-style: none;
+      font-size: 1.15rem;
+    }
+  }

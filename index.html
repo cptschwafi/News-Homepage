@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body>
+  <header>
+    <img class="Company__Logo"src="assets/images/logo.svg" alt="">
+    <nav id="NavBar">
+      <div class="Nav__Elements">
+        <svg class="Close__Icon" id="Close__Icon" width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
+        <ul class="Nav__Links">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </div>
+    </nav>
+    <svg class="Hamburger__Menu__Icon" id="Hamburger__Menu__Icon" width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+  </header>
+
+  <main>
+    <section class="Spotlight__Article">
+      <picture class="Spotlight__Image">
+        <source srcset="assets/images/image-web-3-desktop.jpg" media="(min-width: 1250px)">
+        <img src="assets/images/image-web-3-mobile.jpg" alt="">
+      </picture>
+      
+      <div class="Spotlight__Content">
+        <div name="Grid__Element1">
+          <h1>The Bright Future of Web 3.0?</h1> 
+        </div>
+        <div name="Grid__Element2">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?
+          <button class="Read__More__Btn">Read more</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="New__Articles__Container">
+      <h1>New</h1> 
+      <article class="New__Article">
+        <h2>Hydrogen VS Electric Cars</h2>
+        Will hydrogen-fueled cars ever catch up to EVs?
+      </article>
+      <article class="New__Article">
+        <h2>The Downsides of AI Artistry</h2>
+        What are the possible adverse effects of on-demand AI image generation? 
+      </article>
+      <article class="New__Article">
+        <h2>Is VC Funding Drying Up?</h2>
+        Private funding by VC firms is down 50% YOY. We take a look at what that means.      
+      </article>
+    </section>
+
+    <section class="Article__Suggestions">
+      <article class="Article__Suggestion">
+        <img class="Article__Suggestion__Image" src="assets/images/image-retro-pcs.jpg" alt="" >
+        <div class="content">
+          <p class="Big__Article__Number">01</p> 
+          <h2>Reviving Retro PCs</h2> 
+          <p class="Article__Suggestion__Text">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+      <article class="Article__Suggestion">
+        <img class="Article__Suggestion__Image" src="assets/images/image-top-laptops.jpg" alt="">
+        <div class="content">
+          <p class="Big__Article__Number">02</p> 
+          <h2>Top 10 Laptops of 2022</h2>
+          <p class="Article__Suggestion__Text">Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+      <article class="Article__Suggestion">
+        <img class="Article__Suggestion__Image" src="assets/images/image-gaming-growth.jpg" alt="">
+        <div class="content">
+          <p class="Big__Article__Number">03</p> 
+          <h2>The Growth of Gaming</h2>
+          <p class="Article__Suggestion__Text">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+    </section>
+    <script src="app.js"></script>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/cptschwafi">Andreas Schwarzfischer</a>.
+    </div>
+  </footer>
+
+</body>
+</html>
